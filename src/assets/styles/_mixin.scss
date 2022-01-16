@@ -1,0 +1,27 @@
+@import '../styles/responsive';
+
+
+%btnVocab {
+  font-family: lato, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  transition: background-color 0.3s linear;
+  @include mobile{
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: rgb(15, 117, 180);
+  }
+}

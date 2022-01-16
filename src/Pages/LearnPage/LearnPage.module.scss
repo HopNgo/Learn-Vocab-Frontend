@@ -1,0 +1,50 @@
+@import "../../assets/styles/mixin";
+@import "../../assets/styles/variable";
+@import "../../assets/styles/responsive";
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  .links {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include mobile {
+      flex-direction: row;
+      top: 580px;
+      left: 15%;
+      gap: 25px;
+    }
+    .btnHome {
+      @extend %btnVocab;
+    }
+    .btnManage {
+      @extend %btnVocab;
+    }
+  }
+  .notification {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    z-index: -1;
+    @include mobile {
+      left: -40px;
+      top: 0px;
+    }
+  }
+  h1 {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    color: $font-color;
+    @include mobile {
+      font-size: 20px;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  }
+}

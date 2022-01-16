@@ -1,0 +1,37 @@
+@import "../../assets/styles/variable";
+@import "../../assets/styles/responsive";
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .item {
+    width: 450px;
+    height: 100px;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px 1px #a8a7a7;
+    @include mobile {
+      width: 170px;
+      height: 70px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    span {
+      font-size: 25px;
+      color: $font-color;
+      @include mobile {
+        padding: 12px;
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../assets/styles/variable";
+@import "../../assets/styles/responsive";
+
+.container {
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  box-shadow: 1px 1px 1px 1px #f9f9f9;
+  @include mobile {
+    width: 360px;
+  }
+  span {
+    font-size: 50px;
+    color: $font-color;
+    @include mobile {
+      font-size: 35px;
+    }
+  }
+}

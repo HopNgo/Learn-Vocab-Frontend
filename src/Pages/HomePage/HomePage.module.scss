@@ -1,0 +1,29 @@
+@import "../../assets/styles/mixin";
+@import "../../assets/styles/variable";
+@import "../../assets/styles/responsive";
+
+.container {
+  .title {
+    text-align: center;
+    color: #f9f9f9;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 60px;
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    .btnLearn {
+      @extend %btnVocab;
+      margin-right: 20px;
+    }
+    .btnManage {
+      @extend %btnVocab;
+    }
+  }
+}
+
