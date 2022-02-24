@@ -1,3 +1,4 @@
+import { CircularProgress } from "@material-ui/core";
 import React from "react";
 import styles from "./BoxAnswer.module.scss";
 
@@ -55,7 +56,6 @@ function BoxAnswer({ arrayVocabs, index, onClickAnswer }) {
   const handleClickAnswer = (vocab) => {
     onClickAnswer(vocab);
   };
-
   return (
     <div className={styles.container}>
       {shuffle(arrayAnswer).map((vocab, index) => (
@@ -64,7 +64,7 @@ function BoxAnswer({ arrayVocabs, index, onClickAnswer }) {
           key={index}
           className={styles.item}
         >
-          <span>{vocab.vn}</span>
+          {vocab.vn.length > 0 ? <span>{vocab.vn}</span>: <CircularProgress />}
         </div>
       ))}
     </div>

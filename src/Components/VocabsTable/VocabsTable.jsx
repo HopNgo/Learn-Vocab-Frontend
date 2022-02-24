@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import MaterialTable from "material-table";
+import MaterialTable from "@material-table/core";
 import VocabsContext from "../../store/VocabsContext";
 import { deleteVocab, postVocab, updateVocab } from "../../api/index";
 
@@ -12,6 +12,7 @@ function VocabsTable() {
     { title: "Tiếng anh", field: "en" },
     { title: "Tiếng việt", field: "vn" },
   ];
+  console.log(vocabs);
   return (
     <>
       <MaterialTable
@@ -23,6 +24,7 @@ function VocabsTable() {
         }}
         columns={columns}
         data={vocabs}
+        isLoading={vocabs[0].en.length > 0 ? false : true}
         title="Thông tin danh sách từ vựng"
         editable={{
           onRowAdd: (newRow) =>
@@ -86,6 +88,7 @@ function VocabsTable() {
           },
           pagination: {
             labelRowsSelect: "hàng",
+            labelRowsPerPage: ""
           },
         }}
       />

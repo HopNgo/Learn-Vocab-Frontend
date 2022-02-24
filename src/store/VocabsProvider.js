@@ -16,9 +16,10 @@ const VocabsProvider = ({ children }) => {
             console.log(error);
         }
     }
+    console.log(vocabs);
 
-    useEffect(() => {
-        getVocabsList();
+    useEffect( () => {
+         getVocabsList();
     }, [])
     return (
         <VocabsContext.Provider value={{ vocabs, setVocabs }}>
