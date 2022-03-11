@@ -2,6 +2,7 @@ import { useContext } from "react";
 import MaterialTable from "@material-table/core";
 import VocabsContext from "../../store/VocabsContext";
 import { deleteVocab, postVocab, updateVocab } from "../../api/index";
+import "./VocabsTable.scss";
 
 function VocabsTable() {
   console.log("re-render-vocabsTable");
@@ -19,8 +20,7 @@ function VocabsTable() {
         style={{
           color: "rgb(8, 33, 116)",
           backgroundColor: "#f9f9f9",
-          borderRadius: "50px",
-          padding: "20px",
+          padding: "0.5rem",
         }}
         columns={columns}
         data={vocabs}
@@ -88,7 +88,7 @@ function VocabsTable() {
           },
           pagination: {
             labelRowsSelect: "hàng",
-            labelRowsPerPage: ""
+            labelRowsPerPage: "",
           },
         }}
       />

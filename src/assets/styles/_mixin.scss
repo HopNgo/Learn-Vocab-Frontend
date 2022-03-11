@@ -1,5 +1,4 @@
-@import '../styles/responsive';
-
+@import "../styles/responsive";
 
 %btnVocab {
   font-family: lato, sans-serif;
@@ -16,9 +15,10 @@
   border-radius: 20px;
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
   transition: background-color 0.3s linear;
-  @include mobile{
-    padding: 9px 18px;
-    font-size: 14px;
+  @include mobile {
+    padding: 0.6rem;
+    min-width: 8rem;
+    font-size: 0.9rem;
   }
 
   &:hover {

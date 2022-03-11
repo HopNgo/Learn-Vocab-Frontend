@@ -15,8 +15,10 @@
     gap: 15px;
     @include mobile {
       flex-direction: row;
-      top: 580px;
-      left: 15%;
+      top: 37rem;
+      min-width: 21.4rem;
+      left: 50vw;
+      transform: translateX(-50%);
       gap: 25px;
     }
     .btnHome {
